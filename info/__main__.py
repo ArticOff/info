@@ -44,6 +44,9 @@ def __get__(name: str = None) -> None:
     response: Response = get(
         url=f"https://pypi.org/pypi/{name}/json"
     )
+    if response.status_code == 404:
+        print("This module doesn't exist.")
+        return
     downloads: int = get(
         url=f"https://pypistats.org/api/packages/{name.replace('.', '-')}/recent"
     ).json()["data"]["last_month"]
