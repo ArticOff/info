@@ -25,5 +25,5 @@ DEALINGS IN THE SOFTWARE.
 """
 
 __author__ = 'Artic'
-__version__ = '1.0.2'
+__version__ = '1.0.3'
 __description__ = 'Do you want information about your packages?'
